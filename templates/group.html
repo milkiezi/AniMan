@@ -1,0 +1,20 @@
+{% extends 'base_layout.html' %}
+
+{% block body %}
+<div class="col-sm-12"><h2>Group</h2><br></div>
+
+{% for i in group %}
+<div class="col-sm-12">
+    <div class="media border p-3 mx-auto" style="width: 90%;">
+        <img src="{{i.avatar}}" class="mr-3 mt-3 rounded">
+        <div class="media-body">
+          <h4>{{i.name}} <small style="font-size: 16px;"><i>Created At {{i.createdAt}}</i></small></h4>
+          <p>{{i.about}}</p>
+          <a class="btn btn-success rounded" href="https://kitsu.io/groups/{{i.slug}}">See More..</a>
+          <span style="float: right;"><p><i class="fa fa-user"></i> {{i.membersCount}}</p></span>      
+        </div>
+    </div><br>
+</div>
+{% endfor %}
+
+{% endblock %}

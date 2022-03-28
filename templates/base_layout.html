@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>AniManga</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+  p { font-size: 17px; }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+    font-size: 13px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:link, footer p, footer a:link{
+    color: #d9d9d9 !important;
+  }
+  .navbar-nav  li a:link {
+    font-weight: bold;
+  }
+  .card a:hover { width: 102%; }
+  .navbar-nav  li a:hover, .card a:hover {
+    color: DarkTurquoise !important;
+  }
+  .navbar-nav  li { padding-right: 25px; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+{% include './includes/navbar.html' %}
+
+<!-- Container (Grid) -->
+<div class="container-fluid bg-light">    
+  <div class="row mx-auto" style="width: 90%">
+    {% block body %}{% endblock %}
+  </div>  
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid text-center bg-dark">
+  <p>copyright &copy; 2021 by
+    <a class="text-white" href="mailto:busarakham.lead@g.swu.ac.th" target="_self"> Busarakham </a>&
+    <a class="text-white" href="mailto:bongkod.bell@g.swu.ac.th" target="_self"> Bongkot </a>&
+    <a class="text-white" href="mailto:sakunit.mlikz@g.swu.ac.th" target="_self"> Sakunit </a>
+  </p>
+</footer>
+
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+  });
+</script>
+
+</body>
+</html>

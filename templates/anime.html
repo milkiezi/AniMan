@@ -1,0 +1,78 @@
+{% extends 'base_layout.html' %}
+
+{% block body %}
+<div class="col-sm-12 mb-5">
+    <h2>Anime</h2>
+    <form class="form-inline justify-content-center">
+        <div class="form-group">
+            <label for="search" class="mb-2 mr-sm-2">Search: </label>
+            <input class="mb-2 mr-sm-2" type="text" name="ani" placeholder=" anime search" style="width: 70%;">
+        </div>
+        <div class="form-group">
+            <label for="cate" class="mb-2 mr-sm-2">Categories: </label>
+            <select class="mb-2 mr-sm-2" name="cate">
+              <option disabled selected value>&nbsp;-- select categories --&nbsp;</option>
+              <option disabled selected value>&nbsp;-- select categories --&nbsp;</option>
+              <option value="action">&nbsp; Action</option>
+              <option value="adventure">&nbsp; Adventure</option>
+              <option value=“asia”>&nbsp; Asia</option>
+              <option value=“comedy”>&nbsp; Comedy</option>
+              <option value=“demon”>&nbsp; Demon</option>
+              <option value=“drama”>&nbsp; Drama</option>
+              <option value=“earth”>&nbsp; Earth</option>
+              <option value=“ecchi”>&nbsp; Ecchi</option>
+              <option value=“fantasy”>&nbsp; Fantasy</option>
+              <option value=“harem”>&nbsp; Harem</option>
+              <option value=“historical”>&nbsp; Historical</option>
+              <option value=“horror”>&nbsp; Horror</option>
+              <option value=“japan”>&nbsp; Japan</option>
+              <option value=“kids”>&nbsp; Kids</option>
+              <option value=“magic”>&nbsp; Magic</option>
+              <option value=“mecha”>&nbsp; Mecha</option>
+              <option value=“military”>&nbsp; Military</option>
+              <option value=“motorsports”>&nbsp; Motorsports</option>
+              <option value=“music”>&nbsp; Music</option>
+              <option value=“mystery”>&nbsp; Mystery</option>
+              <option value=“parody”>&nbsp; Parody</option>
+              <option value=“present”>&nbsp; Present</option>
+              <option value=“psychological”>&nbsp; Psychological</option>
+              <option value=“romance”>&nbsp; Romance</option>
+              <option value=“seinen”>&nbsp; Seinen</option>
+              <option value=“shounen”>&nbsp; Shounen</option>
+              <option value=“sports”>&nbsp; Sports</option>
+              <option value=“supernatural”>&nbsp; Supernatural</option>
+              <option value=“thriller”>&nbsp; Thriller</option>
+              <option value=“violence”>&nbsp; Violence</option>
+              <option value=“yaoi”>&nbsp; Yaoi</option>
+            </select>
+        </div>
+        <br>
+        <div class="col-sm-12 form-group justify-content-center text-center mt-2">
+            <input class="btn btn-info" type="submit" value="Search">
+        </div>
+    </form>
+</div>
+{% if anime %}
+
+    {% for i in anime %}
+    <div class="col-sm-3 text-center">
+        <div class="card bg-light mx-auto" style="border: none; width: 75%;">
+            <a class="text-dark" style="text-decoration: none;" href="https://kitsu.io/anime/{{i.slug}}" 
+            data-toggle="tooltip" data-placement="bottom" title="{{i.synopsis}}">
+                <img class="card-img-top" src="{{i.urlImg}}">
+                <div class="card-body">
+                    <p class="card-text">{{i.name}}</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+
+{% else %}
+
+    <div class="col-sm-12">
+        <img class="mx-auto d-block rounded img-fluid" src="https://zum-talent.ecore.com.sg/assets/frontend/image/no_result.jpeg">
+    </div>
+{% endif %}
+
+{% endblock %}

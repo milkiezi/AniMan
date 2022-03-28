@@ -1,0 +1,36 @@
+{% extends 'base_layout.html' %}
+
+{% block body %}
+<div class="col-sm-12"><h2>Trending Anime</h2><br></div>
+
+{% for i in topanime %}
+<div class="col-sm-3 text-center">
+        <div class="card bg-light mx-auto" style="border: none; width: 75%;">
+                <a class="text-dark" style="text-decoration: none;" href="https://kitsu.io/anime/{{i.slug}}" 
+                data-toggle="tooltip" data-placement="bottom" title="❤ #{{i.popular}} Most Popular &emsp;⭐#{{i.rating}} Highest Rated">
+                <img class="card-img-top" src="{{i.urlImg}}">
+                        <div class="card-body">
+                                <p class="card-text">{{i.name}}</p>
+                        </div>
+                </a>
+        </div>
+</div>
+{% endfor %}
+
+<div class="col-sm-12"><hr><br><h2>Trending Manga</h2><br></div>
+
+{% for i in topmanga %}
+<div class="col-sm-3 text-center">
+         <div class="card bg-light mx-auto" style="border: none; width: 75%;">
+                <a class="text-dark" style="text-decoration: none;" href="https://kitsu.io/manga/{{i.slug}}" 
+                data-toggle="tooltip" data-placement="top" title="❤ #{{i.popular}} Most Popular &emsp;⭐#{{i.rating}} Highest Rated">
+                <img class="card-img-top" src="{{i.urlImg}}">
+                        <div class="card-body">
+                                <p class="card-text">{{i.name}}</p>
+                        </div>
+                </a>
+        </div>
+</div>
+{% endfor %}
+
+{% endblock %}
