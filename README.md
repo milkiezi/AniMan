@@ -1,4 +1,4 @@
-# AniMan (Midterm Projectม 3rd Year)  
+# AniMan (Midterm Project, 3rd Year)  
 Member
 1) Bongkod buasri 62102010171  
 2) Busarakham leadpattanchat 62102010172  
