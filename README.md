@@ -1,4 +1,4 @@
-# AniMan (CP353 Midterm Project, 3rd Year/Semester 2)  
+# Anime+Manga (CP353 Midterm Project, 3rd Year/Semester 2)  
 Member
 1) Bongkod buasri 62102010171  
 2) Busarakham leadpattanchat 62102010172  
